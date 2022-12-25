@@ -1,3 +1,4 @@
+:set relativenumber
 :map ≤ :!(pdflatex main)<CR><CR>
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
