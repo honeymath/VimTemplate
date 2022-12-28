@@ -1,8 +1,8 @@
 :set relativenumber
 :set nu
 :map ≤ :!(pdflatex main)<CR><CR>
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
+:autocmd InsertEnter * silent !(jsc --in-window ~/Documents/VimTemplate/e.js)
+:autocmd InsertLeave * silent !(jsc --in-window ~/Documents/VimTemplate/b.js)
 inoremap <C-c> <esc>
 " Following commands are for the enter system 
 :let counter=[]
