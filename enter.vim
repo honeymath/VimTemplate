@@ -29,16 +29,18 @@ else
 	let soap=split(enter,"[.]")
 	if(len(soap)>1)
 		let temp="e ".expand('%:p:h')."/".enter
-		call insert(counter,expand('%:p'),0)
-		call insert(position,line('.'),0)
-		execute temp
 	else
 		let temp="e ".expand('%:p:h')."/".enter.".tex"
-		call insert(counter,expand('%:p'),0)
-		call insert(position,line('.'),0)
-		execute temp
-		execute "setf tex"
 	endif
+	let entersplit = split(enter,"/")
+	let rubbish = remove(entersplit,-1)
+	if(len(entersplit)>0)
+		let combined = join(entersplit,"/")
+		execute "silent !mkdir -p ".combined
+	endif
+	call insert(counter,expand('%:p'),0)
+	call insert(position,line('.'),0)
+	execute temp
 endif
 
 
