@@ -16,3 +16,4 @@ inoremap <C-c> <esc>
 :map ÷ :execute "!(rm main.aux)"<CR>:execute "!(rm main.toc)"<CR>:execute "!(rm main.bbl)"<CR>
 set backspace=indent,eol,start
 au BufEnter main.tex,readme.md execute('cd '.expand('%:p:h'))
+au BufEnter * silent !(jsc --in-window ~/Documents/VimTemplate/b.js)
