@@ -17,3 +17,4 @@ inoremap <C-c> <esc>
 set backspace=indent,eol,start
 au BufEnter main.tex,readme.md execute('cd '.expand('%:p:h'))
 au BufEnter * silent !(jsc --in-window ~/Documents/VimTemplate/b.js)
+au ExitPre * silent !(jsc --in-window ~/Documents/VimTemplate/e.js)
