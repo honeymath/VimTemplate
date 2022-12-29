@@ -14,3 +14,4 @@ inoremap <C-c> <esc>
 :map æ :let a=line(".")<CR>:tabe %<CR>:execute a<CR>
 "The following command is used to remove some existing rubbishes in latex
 :map ÷ :execute "!(rm ~/Dropbox/Latex/main.aux)"<CR>:execute "!(rm ~/Dropbox/Latex/main.toc)"<CR>:execute "!(rm ~/Dropbox/Latex/main.bbl)"<CR>
+set backspace=indent,eol,start
