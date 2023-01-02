@@ -19,3 +19,7 @@ au BufEnter main.tex,readme.md execute('cd '.expand('%:p:h'))
 au BufEnter * silent !(jsc --in-window ~/Documents/VimTemplate/b.js)
 au ExitPre * silent !(jsc --in-window ~/Documents/VimTemplate/e.js)
 au BufWritePost ~/Documents/Latex/* !(lg2 add %:p)
+
+:map ¡ :e ~/Documents/Latex/README.md <CR>
+:map ™ :e ~/Documents/Latex/markdown/Diary.md <CR>
+:map £ :e ~/Documents/Latex/markdown/Readme.md <CR>
